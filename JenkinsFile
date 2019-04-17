@@ -11,7 +11,8 @@ node {
                               sudo /usr/local/bin/docker build -t chhayang/jenkins_docker --pull=true /Users/Shared/Jenkins/Home/workspace/Docker-Deployment-Pipeline'''
   }
    stage('Run Docker Image') {
-    sh label: '', script: '''sudo /usr/local/bin/docker run -d -p4200:4200 chhayang/jenkins_docker 
+    sh label: '', script: '''sudo /usr/local/bin/docker kill $(docker ps -q)
+                             sudo /usr/local/bin/docker run -d -p4200:4200 chhayang/jenkins_docker 
     '''
 
    }
