@@ -6,13 +6,14 @@ node {
    }
    stage('Build Docker Image') {
      sh label: '', script: '''sudo /usr/local/bin/docker images 
-                              sudo /usr/local/bin/docker rmi -f chhayang/jenkins_docker
+                              sudo /usr/local/bin/docker rmi -f chhayang/jenkins_docker || true
                               sudo /usr/local/bin/docker images
                               sudo /usr/local/bin/docker build -t chhayang/jenkins_docker --pull=true /Users/Shared/Jenkins/Home/workspace/Docker-Deployment-Pipeline'''
   }
    stage('Run Docker Image') {
     sh label: '', script: '''
                              sudo /usr/local/bin/docker kill testapp || true
+                             sudo /usr/local/bin/docker rm testapp || true
                              sudo /usr/local/bin/docker run --name testapp -d -p4200:4200 chhayang/jenkins_docker 
     '''
 
