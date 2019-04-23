@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ## login to server
 oc login -u developer -p developer --server https://172.17.0.43:8443 --insecure-skip-tls-verify
 
@@ -11,7 +13,9 @@ oc new-app https://github.com/chhayang/TestDocker.git --strategy=docker
 
 ## check build logs
 
-oc logs -f bc/testdocker
+oc logs -f bc/testdocker &&
+
+sleep 180
 
 ## check build status
 
