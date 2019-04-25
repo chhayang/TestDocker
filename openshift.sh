@@ -10,12 +10,11 @@ oc new-project testdocker
 ## Create App within project
 
 oc new-app https://github.com/chhayang/TestDocker.git --strategy=docker
+sleep 30s
 
 ## check build logs
 
 oc logs -f bc/testdocker &&
-
-sleep 180
 
 ## check build status
 
@@ -29,6 +28,7 @@ oc expose service testdocker
 
 oc get route
 
+##
 
 
 
