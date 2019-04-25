@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ## login to server
-oc login -u developer -p developer --server https://172.17.0.43:8443 --insecure-skip-tls-verify
-
+oc login -u developer -p developer 
+## --server https://172.17.0.43:8443 --insecure-skip-tls-verify
 ## create project 
 
 oc new-project testdocker
