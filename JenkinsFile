@@ -14,7 +14,7 @@ node {
     sh label: '', script: '''
                              sudo /usr/local/bin/docker kill testapp || true
                              sudo /usr/local/bin/docker rm testapp || true
-                             sudo /usr/local/bin/docker run --name testapp -d -p4200:4200 chhayang/jenkins_docker 
+                             sudo /usr/local/bin/docker run --name testapp -d -p80:80 chhayang/jenkins_docker 
     '''
 
    }
