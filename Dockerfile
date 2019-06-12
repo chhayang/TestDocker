@@ -1,4 +1,5 @@
-FROM node:latest as node
+#FROM node:latest as node
+FROM arm32v7/node as node
 WORKDIR /app
 COPY . .
 RUN npm install
