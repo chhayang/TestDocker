@@ -3,7 +3,7 @@
 #FROM node:8.11.2-alpine
 #FROM armhf/node
 #FROM brereton/rpi3node
-FROM knjcode/rpi-node-armv7
+FROM arm32v7/node
 
 WORKDIR /usr/src/app
 
