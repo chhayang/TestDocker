@@ -32,7 +32,9 @@ RUN /bin/sh
 COPY . .
 
 RUN npm run build
-#RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli
+
+RUN ng -v
 
 EXPOSE 4200
 
