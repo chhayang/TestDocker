@@ -3,12 +3,18 @@
 #FROM node:8.11.2-alpine
 #FROM armhf/node
 #FROM brereton/rpi3node
-FROM arm32v7/node:8.16.0-onbuild
+FROM arm32v7/node
 
 #RUN wget https://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-armv7l.tar.xz
 #RUN tar -xf node*.tar.xz
 #RUN cd node-v10.16.0-linux-armv7l
 #RUN sudo cp -R * /usr/local/
+RUN sudo apt-get update
+
+RUN sudo curl -sL https://deb.nodesource.com/setup_11.x | bash -
+
+RUN sudo apt-get install -y nodejs
+
 RUN npm -v
 RUN node -v
 
