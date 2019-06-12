@@ -32,9 +32,9 @@ RUN /bin/sh
 COPY . .
 
 RUN npm run build
-RUN npm install -g @angular/cli
+#RUN npm install -g @angular/cli
 
-RUN ng -v
+#RUN ng -v
 
 EXPOSE 4200
 CMD npm start --host 0.0.0.0 --port 4200 --disable-host-check
