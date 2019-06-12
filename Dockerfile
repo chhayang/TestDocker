@@ -6,4 +6,4 @@ RUN npm run build --prod
 
 #Stage 2
 FROM nginx:alpine
-COPY --from=node /app/dist/Testdocker /usr/share/nginx/html
+COPY --from=node /app/dist/TestDocker /usr/share/nginx/html
