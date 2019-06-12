@@ -37,6 +37,6 @@ RUN npm run build
 #RUN ng -v
 
 EXPOSE 4200
-CMD npm start --host 0.0.0.0 --port 4200 --disable-host-check
+CMD npm start --disable-host-check
 
 #CMD ng serve --host 0.0.0.0 --port 4200 --disable-host-check
