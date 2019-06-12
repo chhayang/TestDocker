@@ -1,9 +1,9 @@
 #FROM hypriot/rpi-node
 #FROM arm32v7/node
-#FROM node:8.11.2-alpine
+FROM node:8.11.2-alpine
 
 #FROM armhf/node
-FROM brereton/rpi3node
+#FROM brereton/rpi3node
 
 WORKDIR /usr/src/app
 
